@@ -23,12 +23,12 @@ services:
       dockerfile: hfplay/Dockerfile
     environment:
       - ConnectionStrings__Hangfire=Server=database;Port=5432;User Id=postgres;Password=docker;Database=db
-#  hfplay-2:
-#    depends_on:
-#      - database
-#    image: ${DOCKER_REGISTRY-}hfplay
-#    build:
-#      context: .
-#      dockerfile: hfplay/Dockerfile
-#    environment:
-#      - ConnectionStrings__Hangfire=Server=database;Port=5432;User Id=postgres;Password=docker;Database=db
+  hfplay-2:
+    depends_on:
+      - database
+    image: ${DOCKER_REGISTRY-}hfplay
+    build:
+      context: .
+      dockerfile: hfplay/Dockerfile
+    environment:
+      - ConnectionStrings__Hangfire=Server=database;Port=5432;User Id=postgres;Password=docker;Database=db
